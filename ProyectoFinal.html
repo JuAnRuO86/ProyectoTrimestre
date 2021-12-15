@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto Final</title>
+
+    <style>
+        #fotoPerro {
+            width: 100%;
+            object-fit: cover;
+
+        }
+
+        #portaPerros {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+
+        @media screen and (orientation:landscape) {
+            #fondo {
+                width: 100vw;
+                height: 100vh;
+                background-color: rgb(187, 184, 22, 0.5);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+            }
+        }
+        @media screen and (orientation:portrait) {
+            #fondo {
+                width: 100vw;
+                height: 100vh;
+                background-color: rgba(25, 15, 167, 0.5);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="fondo">
+        <picture id="portaPerros">
+
+            <source media="(orientation: landscape) and (min-width: 1920px)" srcset="Grande_Horizontal.heic"
+                type="image/heic">
+            <source media="(orientation: landscape) and (min-width: 1920px)" srcset="Grande_Horizontal.webp"
+                type="image/webp">
+            <source media="(orientation: landscape) and (min-width: 1920px)" srcset="Grande_Horizontal.jpg"
+                type="image/jpg">
+
+            <source media="(orientation: landscape) and (min-width: 800px)" srcset="Mediano_Horizontal.heic"
+                type="image/heic">
+            <source media="(orientation: landscape) and (min-width: 800px)" srcset="Mediano_Horizontal.webp"
+                type="image/webp">
+            <source media="(orientation: landscape) and (min-width: 800px)" srcset="Mediano_Horizontal.jpg"
+                type="image/jpg">
+
+            <source media="(orientation: portrait) and (min-width:1200px)" srcset="Vertical_Grande.heic"
+                type="image/heic">
+            <source media="(orientation: portrait) and (min-width:1200px)" srcset="Vertical_Grande.webp"
+                type="image/webp">
+            <source media="(orientation: portrait) and (min-width:1200px)" srcset="Vertical_Grande.jpg"
+                type="image/jpg">
+
+            <source media="(orientation: portrait) and (min-width:600px)" srcset="Mediano_Vertical.heic"
+                type="image/heic">
+            <source media="(orientation: portrait) and (min-width:600px)" srcset="Mediano_Vertical.webp"
+                type="image/webp">
+            <source media="(orientation: portrait) and (min-width:600px)" srcset="Mediano_Vertical.jpg"
+                type="image/jpg">
+
+
+            <img id="fotoPerro" alt="Foto de un perro" title="Un perro muy bonito"
+                src="Grande_Horizontal_Original_2560x1440.jpeg" />
+            <!-- alt es una descripción que aparece si no carga la imagen, mientras que title 
+                se mostrará cuando pasemos el ratón por encima de la imagen-->
+        </picture>
+    </div>
+
+</body>
+
+</html>
